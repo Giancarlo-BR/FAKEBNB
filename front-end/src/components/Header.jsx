@@ -1,19 +1,23 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <div className="shadow-md">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-8 py-4">
-        <div className="flex items-center">
+    <header className="shadow-md">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-2 py-4 sm:px-8">
+        <Link to="/" className="flex items-center">
           <img
             className="h-11"
             src="https://img.icons8.com/?size=512&id=103424&format=png"
             alt="PNG_airbnb"
           />
           <p className="text-primary-400 text-2xl font-bold">FakeBNB</p>
-        </div>
+        </Link>
 
-        <div className="flex items-center rounded-full border border-gray-300 py-2 pr-4 pl-6 shadow-md">
+        <Link
+          to="/"
+          className="hidden items-center rounded-full border border-gray-300 py-2 pr-4 pl-6 shadow-md lg:flex"
+        >
           <p className="border-r border-r-gray-300 pr-4">Qualquer lugar</p>
           <p className="border-r border-r-gray-300 px-4">Qualquer semana</p>
           <p className="px-4">Hóspedes</p>
@@ -34,7 +38,7 @@ const Header = () => {
               />
             </svg>
           </div>
-        </div>
+        </Link>
 
         <div className="flex items-center gap-2 rounded-full border border-gray-300 py-2 pr-4 pl-6 shadow-md">
           <svg
@@ -62,10 +66,10 @@ const Header = () => {
               clipRule="evenodd"
             />
           </svg>
-          <p>Giancarlo XYZ</p>
+          <p className="max-w-20 truncate sm:max-w-32">Giancarlo XYZ</p>
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 
